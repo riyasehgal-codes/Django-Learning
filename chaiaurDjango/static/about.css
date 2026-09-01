@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8ef;
+    color: #3b2416;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #e8c39e;
+    border-bottom: 3px solid #3b2416;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #68452d;
+}
+
+/* Main */
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+
+    border: 2px solid #3b2416;
+    border-radius: 18px;
+
+    box-shadow: 7px 7px 0 #3b2416;
+}
+
+/* Section headings */
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* About section */
+
+.about p {
+    margin-bottom: 15px;
+    color: #5c4638;
+}
+
+/* Features */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.features h2 {
+    width: 100%;
+}
+
+.feature {
+    flex: 1;
+    min-width: 200px;
+
+    padding: 20px;
+    background: #fff1dc;
+
+    border: 2px solid #3b2416;
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0 #3b2416;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+/* Mission */
+
+.mission {
+    background: #f6dfc2;
+}
+
+.mission p {
+    margin-bottom: 12px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+
+    background: #3b2416;
+    color: white;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+}

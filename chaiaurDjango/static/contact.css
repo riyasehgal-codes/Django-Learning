@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f1e8;
+    color: #202820;
+}
+
+/* Header */
+
+header {
+    padding: 70px 20px;
+    text-align: center;
+    background: #202820;
+    color: #f4f1e8;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #b8c7a8;
+}
+
+/* Main */
+
+main {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+/* Contact */
+
+.contact {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact h2,
+.contact-info h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact > p {
+    color: #687064;
+    margin-bottom: 30px;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    background: transparent;
+
+    border: none;
+    border-bottom: 2px solid #a5ad9d;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 2px solid #607d52;
+    background: #ebe8dd;
+}
+
+/* Button */
+
+form button {
+    align-self: flex-start;
+
+    padding: 13px 25px;
+
+    background: #607d52;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+form button:hover {
+    background: #49633e;
+    transform: translateY(-3px);
+}
+
+/* Contact Information */
+
+.contact-info {
+    margin-top: 70px;
+}
+
+.info {
+    padding: 20px 0;
+    border-bottom: 1px solid #c5c8bd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info h3 {
+    font-size: 17px;
+}
+
+.info p {
+    color: #687064;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 80px;
+    padding: 25px;
+
+    text-align: center;
+
+    background: #202820;
+    color: #f4f1e8;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    main {
+        margin: 40px auto;
+    }
+
+    .info {
+        display: block;
+    }
+
+    .info p {
+        margin-top: 5px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
