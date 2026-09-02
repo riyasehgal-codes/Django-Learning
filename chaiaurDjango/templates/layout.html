@@ -1,3 +1,4 @@
+{% load tailwind_tags %}
 {% load static %}
 {% comment %} common layout {% endcomment %}
 
@@ -13,6 +14,7 @@
         {% endblock %}
     </title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% tailwind_css %}
 </head>
 <body>
     <nav> </nav>
