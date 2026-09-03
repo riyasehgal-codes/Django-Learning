@@ -29,7 +29,29 @@
 
     </main>
 
-    <footer>
+    <footer>    
         <p>Made with ☕ and code.</p>
     </footer>
+
+    {% for chai in chais %}
+    <div class="chai-item">
+
+        <p>Name: {{ chai.name }}</p>
+
+        <p>Image path: {{ chai.image }}</p>
+
+        <p>Image URL: {{ chai.image.url }}</p>
+
+        <img 
+    src="{{ chai.image.url }}" 
+    alt="{{ chai.name }}"
+    width="300"
+    height="200"
+>
+
+    </div>
+{% endfor %}
+
+
 {% endblock %}
+
