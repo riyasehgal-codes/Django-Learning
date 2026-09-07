@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ chai.name }} | Chai Details
+{% endblock %}
+
+{% block content %}
+
+<div class="min-h-screen bg-stone-50 py-12 px-6">
+
+    <div class="max-w-5xl mx-auto">
+
+        <!-- Back Button -->
+        <a href="/chai/"
+           class="inline-flex items-center gap-2 mb-8 text-stone-600 hover:text-stone-900 font-medium transition">
+            <span class="text-xl">←</span>
+            Back to Chai
+        </a>
+
+
+        <!-- Main Card -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+
+
+                <!-- IMAGE -->
+                <div class="bg-stone-100 h-[450px] md:h-[550px]">
+
+                    {% if chai.image %}
+                        <img
+                            src="{{ chai.image.url }}"
+                            alt="{{ chai.name }}"
+                            class="w-full h-full object-cover"
+                        >
+                    {% else %}
+                        <div class="w-full h-full flex items-center justify-center text-stone-400">
+                            No image available
+                        </div>
+                    {% endif %}
+
+                </div>
+
+
+                <!-- DETAILS -->
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+
+                    <!-- Small label -->
+                    <p class="text-sm uppercase tracking-widest text-stone-500 mb-3">
+                        Chai Details
+                    </p>
+
+
+                    <!-- Name -->
+                    <h1 class="text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-6">
+                        {{ chai.name }}
+                    </h1>
+
+
+                    <!-- Type -->
+                    <div class="mb-6">
+
+                        <p class="text-sm text-stone-500 mb-2">
+                            Type
+                        </p>
+
+                        <span class="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full font-medium">
+                            {{ chai.get_type_display }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Date -->
+                    <div class="border-t border-stone-200 pt-6 mb-8">
+
+                        <p class="text-sm text-stone-500 mb-1">
+                            Added on
+                        </p>
+
+                        <p class="text-lg font-medium text-stone-800">
+                            {{ chai.date_added|date:"d F Y" }}
+                        </p>
+
+                    </div>
+
+
+                    <!-- Button -->
+                    <a href="/chai/"
+                       class="inline-flex items-center justify-center bg-stone-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-stone-700 transition duration-200">
+                        Explore More Chai
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -6,4 +6,5 @@ from . import views
 # Localhost:8000/chai/order
 urlpatterns = [
     path('', views.all_chai, name='all_home'),
+    path('<int:chai_id>/', views.chai_detail, name='chai_detail'),
 ]

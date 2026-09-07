@@ -47,7 +47,7 @@
         >
         <p class= " text-lg py-2">Name: {{ chai.name }}</p>
 
-        <a href="#">
+        <a href="{% url 'chai_detail' chai.id %}">
             <button
             type="button" class= "bg-red-950 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" >
                 {{chai.type}} - {{ chai.id}}
