@@ -32,25 +32,31 @@
     <footer>    
         <p>Made with ☕ and code.</p>
     </footer>
+    <div class="grid grid-cols-3 gap-4 m-6">
 
     {% for chai in chais %}
     <div class="chai-item">
 
-        <p>Name: {{ chai.name }}</p>
+        
 
-        <p>Image path: {{ chai.image }}</p>
+        <img class = "rounded-3xl py-2"
+        src="{{ chai.image.url }}" 
+        alt="{{ chai.name }}"
+        width="300"
+        height="200"
+        >
+        <p class= " text-lg py-2">Name: {{ chai.name }}</p>
 
-        <p>Image URL: {{ chai.image.url }}</p>
-
-        <img 
-    src="{{ chai.image.url }}" 
-    alt="{{ chai.name }}"
-    width="300"
-    height="200"
->
+        <a href="#">
+            <button
+            type="button" class= "bg-red-950 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" >
+                {{chai.type}} - {{ chai.id}}
+            </button>
+        </a>
 
     </div>
-{% endfor %}
+    {% endfor %}
+    </div>
 
 
 {% endblock %}
